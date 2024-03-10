@@ -1,4 +1,5 @@
 # EjerciciosTema3
+https://github.com/MartinaZandio/EjerciciosTema3.git
 
 1. (5 minutos) Escribe un programa que cree una clase para representar un 
 objeto punto en tres dimensiones. Proporcionar un constructor que inicialice 
