@@ -3,9 +3,11 @@ estos atributos (getDia(), getMes() y getAño() y para modificarlos (setDia(int 
 Sobreescribe su método toString(). Crea la fecha 20/10/2018. Muéstrala por pantalla. Después cambia el año 2019. 
 Muéstrala por pantalla. */
 
-public class main2(){
-    fecha fecha1 = new fecha (20,10,2018);
-    System.out.println(fecha1);
-    fecha1.setAño(2019);
-    sout(fecha1);
+public class main2 {
+    public static void main(String[] args) {
+        fecha fecha1 = new fecha(20, 10, 2018);
+        System.out.println(fecha1.toString());
+        fecha1.setAño(2019);
+        System.out.println(fecha1.toString());
+    }
 }
