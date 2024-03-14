@@ -1,6 +1,5 @@
 package ej5;
 
-public enum genero {hombre, mujer};
 
 public class persona{
     private String nombre;
@@ -53,7 +52,7 @@ public class persona{
     public persona (String nombre, int edad, String DNI, genero sexo, float peso, float altura){   //constructor con atributos menos DNI 
         this.nombre = nombre;
         this.edad = edad;
-        this.DNI = 0;
+        this.DNI = DNI;
         this.sexo = sexo; 
         this.peso = peso;
         this.altura = altura; 

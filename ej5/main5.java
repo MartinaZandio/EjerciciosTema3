@@ -22,3 +22,45 @@ todos los anteriores menos el peso y la altura y el último por defecto, para es
 sobrepeso o por debajo de su peso ideal con un mensaje.
 - Indicar para cada objeto si es mayor de edad.
 - Por último, mostrar la información de cada objeto. */
+
+import java.io.BufferedReader;
+import java.io.IOException;
+
+public class main5{
+    public static void main(String[] args) {
+
+        persona persona1 = new persona(nombre, edad, sexo, peso, altura);
+        
+
+        try {
+            BufferedReader leer = new BufferedReader(new InputStreamReader(System.in));
+            System.out.println("Introduce el nombre de la persona:\n ");
+            String nombre = leer.readLine();
+            System.out.println("Introduce la edad de la persona:\n ");
+            int edad = Integer.parseInt(leer.readLine());
+            System.out.println("Introduce el sexo de la persona:\n ");
+            String sexo = //pedri datos si es un enum???????????
+            System.out.println("Introduce el peso de la persona:\n ");
+            float peso = Float.parseFloat(leer.readLine());
+            System.out.println("Introduce la altura de la persona:\n ");
+            float altura = Float.parseFloat(leer.readLine());
+
+
+        } catch (IOException e) {
+            System.out.println("error" + e);
+        }
+        
+        
+
+
+    }
+}
+
+/* try{
+    sout "introduce:"
+    BufferedReader leer = new BufferedReader(new InputStreamReader(System.in));
+    String nombre = leer.readLine();
+    } catch (IOException e{
+        sout "s ha producido un error" +ex
+    }
+    */
