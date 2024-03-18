@@ -25,33 +25,47 @@ sobrepeso o por debajo de su peso ideal con un mensaje.
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class main5{
     public static void main(String[] args) {
 
-        persona persona1 = new persona(nombre, edad, sexo, peso, altura);
-        
+        String nombre = ""; 
+        int edad = 0; 
+        genero sexo = genero.mujer; 
+        float peso = 0; 
+        float altura = 0;
+        String DNI = ""; 
 
         try {
             BufferedReader leer = new BufferedReader(new InputStreamReader(System.in));
             System.out.println("Introduce el nombre de la persona:\n ");
-            String nombre = leer.readLine();
+            nombre = leer.readLine();
             System.out.println("Introduce la edad de la persona:\n ");
-            int edad = Integer.parseInt(leer.readLine());
-            System.out.println("Introduce el sexo de la persona:\n ");
-            String sexo = //pedri datos si es un enum???????????
+            edad = Integer.parseInt(leer.readLine());
+            System.out.println("Introduce el sexo de la persona (hombre/mujer):\n ");
+            sexo = genero.valueOf(leer.readLine());
             System.out.println("Introduce el peso de la persona:\n ");
-            float peso = Float.parseFloat(leer.readLine());
+            peso = Float.parseFloat(leer.readLine());
             System.out.println("Introduce la altura de la persona:\n ");
-            float altura = Float.parseFloat(leer.readLine());
-
-
+            altura = Float.parseFloat(leer.readLine());
         } catch (IOException e) {
             System.out.println("error" + e);
         }
         
-        
+        persona persona1 = new persona(nombre, edad, sexo, peso, altura);
+        persona persona2 = new persona(nombre, edad, sexo);
+        persona persona3 = new persona();
+        persona3.setNombre("Martina");
+        persona3.setEdad(19);
+        persona3.setSexo(genero.mujer);
+        persona3.setPeso(65);
+        persona3.setAltura(180);
 
+
+        System.out.println("PERSONA 1: " + persona1.toString() + " \nademás, " + persona1.evaluarIMCyEdad());
+        System.out.println("PERSONA 2: " + persona2.toString() + " \nademás, " + persona2.evaluarIMCyEdad());
+        System.out.println("PERSONA 3: " + persona3.toString() + " \nademás, " + persona3.evaluarIMCyEdad());
 
     }
 }
